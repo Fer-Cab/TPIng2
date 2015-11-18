@@ -1,13 +1,14 @@
-package tpTest;
+package helloWorld;
 
 import static org.junit.Assert.*;
 
 //import org.junit.Before;
 import org.junit.Test;
 
-import com.Colectivo;
-import com.TarjetaComun;
-import com.TarjetaMedioBoleto;
+
+import uk.co.placona.helloWorld.Colectivo;
+import uk.co.placona.helloWorld.TarjetaComun;
+import uk.co.placona.helloWorld.TarjetaMedioBoleto;
 
 public class TPTest {
 
