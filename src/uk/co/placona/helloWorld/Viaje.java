@@ -1,4 +1,4 @@
-package com;
+package  uk.co.placona.helloWorld;
 
 public class Viaje {
 	/* objetos de tipo Viaje 
