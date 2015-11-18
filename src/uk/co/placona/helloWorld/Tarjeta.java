@@ -1,4 +1,4 @@
-package com;
+package  uk.co.placona.helloWorld;
 
 import java.util.ArrayList;
 
