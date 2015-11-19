@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class Tarjeta {
 
-	private ArrayList<Viaje> viajes = new ArrayList<Viaje>();
+	private ArrayList<Viaje> viajes ;
 	private int tarjetaId;
 	private double saldo;
 	private boolean hizoTransbordo;
