@@ -1,1 +1,84 @@
-Escribir un caso de uso que ilustre la funcionalidad principal del sistema.
+Actor principal: Usuario
+
+Personal involucrado e intereses:
+
+• Usuario: quiere cargar rápidamente, y sin errores 
+
+• EMR: Quiere registrar las transacciones con precisión y satisfacer los intereses de
+los clientes. Quiere asegurar que se registran los pagos. 
+Quiere cierta tolerancia a fallos. Quiere actualización automática y rápida de la cantidad de usuarios que usan el
+  sistema y del monto total de recargas realizadas.
+
+Precondiciones: El número de tarjeta existe.
+
+Garantías de éxito (Postcondiciones): 
+La recarga se realiza con éxito. Se actualiza la cantidad de usuarios que usan el sistema y del monto total de recargas
+   realizadas. Se genera el ticket de recarga.
+
+Escenario principal de éxito (o Flujo Básico):
+
+1. El Usuario llega a un terminal.
+2- Ingresar el Número de la Tarjeta ubicado en el reverso de la misma y Confirmar
+3- Ingresar tarjeta bancaria al cajero y clave personal
+4- Seleccionar la Cuenta Bancaria desde la que se transferirá el dinero para hacer la recarga
+5- Ingresar el Importe y Confirmar
+6- El Sistema gestiona el pago.
+7- El Sistema registra la recarga  y envía la información de la recarga y el pago al 
+sistema de Inventario (para actualizar el inventario).
+8- Se imprimirá el ticket con los datos de la transacción.
+
+Extensiones (o Flujos Alternativos):
+
+*a. En cualquier momento el Sistema falla:
+
+Para dar soporte a la recuperación y registro correcto, asegura que todos los estados y
+eventos significativos de una transacción puedan recuperarse desde cualquier paso
+del escenario.
+
+2. El Sistema reconstruye el estado anterior.
+
+2a. El Sistema detecta anomalías intentando la recuperación:
+
+1. El Sistema informa del error al Usuario, registra el error, y pasa a un estado
+limpio.
+
+2. El Usuario comienza una nueva transacción.
+
+2a. Identificador de tarjeta no válido:
+
+1. El Sistema señala el error y rechaza la entrada.
+
+4-6a. El Usuario modifica el importe de la recarga:
+
+1. El Sistema muestra la suma actualizada.
+
+4-6b. El Usuario le pide al Sistema que cancele la recarga:
+
+1. Se cancela la recarga en el Sistema.
+
+6a. El Sistema recibe la denegación del pago:
+
+1. El Sistema señala la denegación al Usuario .
+
+2. El Sistema le pide al Usuario un modo de pago alternativo.
+
+Requisitos especiales:
+
+• Interfaz de Usuario con pantalla táctil en un gran monitor de pantalla plana. El texto debe
+ser visible a un metro de distancia.
+
+• Tiempo de respuesta para la autorización del pago de 30 segundos el 90% de las 
+veces.
+
+• De algún modo, queremos recuperación robusta cuando falla el acceso a servicios 
+ remotos, como el sistema de inventario.
+
+• Internacionalización del lenguaje del texto que se muestra.
+
+Lista de tecnología y variaciones de datos:
+
+2a. El identificador de la tarjeta  se introduce a través del teclado táctil.
+
+4a. La entrada de la información de la cuenta se lleva a cabo mediante el teclado táctil.
+
+Frecuencia: Podría ser casi continuo.
