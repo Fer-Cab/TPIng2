@@ -1,4 +1,4 @@
-package  uk.co.placona.helloWorld;
+package  org;
 
 public class TarjetaComun extends Tarjeta {
 	/* TarjetaComun: Paga el boleto a 5.75 y el transbordo a 1.90

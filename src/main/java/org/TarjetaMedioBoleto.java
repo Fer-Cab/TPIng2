@@ -1,4 +1,4 @@
-package  uk.co.placona.helloWorld;
+package  org;
 
 public class TarjetaMedioBoleto extends Tarjeta {
 

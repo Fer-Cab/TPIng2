@@ -1,4 +1,4 @@
-package  uk.co.placona.helloWorld;
+package  org;
 
 public class Main {
 
@@ -7,7 +7,7 @@ public class Main {
 
 		Colectivo c1 = new Colectivo("Semtur", 01, "123");
 		Colectivo c2 = new Colectivo("Semtur", 11, "122");
-		Colectivo c3 = new Colectivo("Semtur", 21, "120");
+//		Colectivo c3 = new Colectivo("Semtur", 21, "120");
 
 		TarjetaMedioBoleto t2 = new TarjetaMedioBoleto(1);
 		
